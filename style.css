@@ -327,5 +327,30 @@ the b1-container to set the height of the a1-b1-container so that it would "push
   #projects{
   transform: translateX(20vw);
   }
+  .cv-container{
+    transform: translateX(-40vw);
+  }
 }
 
+.cv-button{
+  max-width: 100px;
+  min-width: 100px;
+}
+.cv-container p{
+  font-size: 0.8rem;
+  text-align: left;
+  min-width: 90px;
+  color: #ffface;
+}
+.cv-container button{
+  font-size: 1.5rem;
+  border: solid;
+  border-color: #ffba35;
+  background-color: #ffface;
+  color: #8f3f26;
+}
+.cv-button-box{
+  background-color: #8f3f26;
+  min-width: 200px;
+  border-radius: 5%;
+}
