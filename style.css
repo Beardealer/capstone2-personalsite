@@ -1,0 +1,331 @@
+
+body{
+    
+  }
+  
+p{
+  font-family: "Raleway"; 
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+h2{
+  font-family: "Raleway";
+}
+h3{
+  font-family: "Raleway";
+  color: #ffba35;
+  font-weight: 500;
+  font-size: 2.2rem
+}
+h4{
+  font-family: "Raleway";
+  color: #ffba35;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* #region CSS for title section */
+  
+.sun{
+    width: 100%;
+  }
+  
+  
+/* The a1 and b1 containers were intially centered as bootstrap containers and I tried to overlay b1 over a1 by 
+translating it upwards by 100%. This however meant that the b1 container was not removed from the normal document 
+flow and so left space underneath, meaning there would be a large gap between this section and the next. 
+To get around this I created the a1-b1-container around both a1 and b1 and set it to relative, then set the a1 and b1 to absolute. 
+This un-centered them, so I set the a1-b1-container to display as flex and justify-content to center.
+Although the a1-b1-container is relative, its contents are absolute, which stops the container from "seeing"
+the dimensions of its contents, reducing the height of the container to zero. This means that the next section
+would still overlap this one. To get around this I had to use the same media query points that were used for
+the b1-container to set the height of the a1-b1-container so that it would "push" the next section down.*/
+
+#title{
+  background-color:#fff6a8;
+  padding-top: 200px;
+  }
+.a1-b1-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  }
+
+.a1-container{
+    position: absolute;
+    z-index: 1;
+  }
+.a1-flex{
+    display: flex;
+    justify-content: center;
+  }
+  
+.b1-container{
+    /*b1-container created to overlay a1 in order to overlay images and text*/
+    /* background-color: rgb(30, 255, 0); */
+    position: absolute;
+    z-index: 2;
+  }
+.b1-flex{
+    display: flex;
+    justify-content: center;
+  }
+  
+.b1-grid{
+    /* Created grid in order to place cloud images and text. */
+    display: grid;
+    /* 6x6 equal grid for now, could add different sized columns if wanted to have varying cloud sizes */
+    grid-template: repeat(6, 1fr) / repeat(6, 1fr); 
+    /*Added 3rem to dimensions and translated due to padding on the b1-container. 
+    This way the b1-grid will completely overlay the b1-container. */
+    height: calc(100% + 3rem); 
+    width: calc(100% + 3rem);
+    transform: translate(-1.5rem, -3rem);
+    
+  }
+  
+.cloudbox{
+    /* Temporary borders to help visualise. */
+    /* border: solid; */
+    border-color: black;
+  }
+  
+.cloudbox > img{
+    width: 100%;
+  }
+  
+.cloud1{
+    grid-area: 1/6/1/7;
+  }
+.cloud2{
+    grid-area: 3/1/3/3;
+  }
+.cloud3{
+    grid-area: 5/5/5/6;
+  }
+  
+  /* See the below media queries for b1-container. b1-grid is set up as 6x6,
+  so the width of each box is the b1-grid width/6. 
+  To make h1 fit inside a box I tried setting it's width to the b1-grid width/6.
+  Then I did width/3 and height/3 in order to fill four boxes. 
+  I could try altering the number of boxes/columns & rows it will span with media query. 
+  I will have to alter width & height accordingly.
+  */
+ h1{
+    text-align: center;
+    margin: 0;
+    color: #8f3f26;
+    height: 100%;
+    width: 100%;
+    font-family: "Dancing Script";
+    }
+ .welcomepage{
+    grid-area: 2/3/4/5;
+  }
+ .readbelow{
+    grid-area: 4/3/5/5;
+  }
+ .readbelow > h2{
+    margin: 0;
+    color: #8f3f26;
+  }
+  
+  
+  
+/* #region Media queries for breakpoints */
+  
+  
+  /* y/x ratio of a1-container changes at different breakpoints. 
+  To have b1 mimic the size of a1, check y of a1 at
+  all breakpoints.
+  @>1400px: x is variable
+  @>1200px: x=1140px y=552.062px
+  @>992px: x=960px y=468.031px
+  @>768px: x=720px y=356.031px
+  @>576px: x=540px y=272.016px
+  @<576px: x is variable  */
+  
+  @media (max-width: 575px){
+    .a1-container{
+      width: 540px;
+    }
+    .b1-container{
+      height: 272.016px;
+      width: 540px;
+    }
+    .readbelow{
+      display: none;
+    }
+    .welcomepage{
+      width: calc(540px / 3);
+      height: calc(272.016px / 3);
+    }
+    h1{
+      font-size: 2.5rem;
+      padding-top: 40px;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767px){
+    .b1-container{
+      height: 272.016px;
+    }
+    .welcomepage{
+      width: calc(540px / 3);
+      height: calc(272.016px / 3);
+    }
+    h1{
+      font-size: 2.5rem;
+      padding-top: 40px;
+    }
+    .readbelow{
+      display: none;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px){
+    .b1-container{
+      height: 356.031px;
+    }
+    .welcomepage{
+      width: calc(720px / 3);
+      height: calc(356.031px / 3);
+    }
+    h1{
+      padding-top: 20px;
+      font-size: 2.5rem;
+    }
+    .readbelow > h2{
+      font-size: 0.9rem;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px){
+    .b1-container{
+      height: 468.031px;
+    }
+    .welcomepage{
+      width: calc(960px / 3);
+      height: calc(468.031px / 3);
+    }
+    h1{
+      font-size: 3rem;
+      padding-top: 30px;
+    }
+    .readbelow > h2{
+      font-size: 1.2rem;
+    }
+  }
+  @media (min-width: 1200px) and (max-width: 1399px){
+    .a1-container{
+      height: 552.062px;
+    }
+    .b1-container{
+        height: 552.062px;
+        width: 1140px;
+      }
+    .welcomepage{
+    width: calc(1140px / 3);
+    height: calc(552.062px / 3);
+    }
+    h1{
+      font-size: 4rem;
+      padding-top: 10px;
+    }
+    .readbelow > h2{
+      font-size: 1.4rem;
+    }
+  }
+  @media (min-width: 1400px){
+    .a1-container{
+      width: 1140px;
+    }
+    .b1-container{
+      height: 552.062px;
+      width: 1140px;
+    }
+    .welcomepage{
+      width: calc(1140px / 3);
+      height: calc(552.062px / 3);
+    }
+    h1{
+      font-size: 4rem;
+      padding-top: 10px;
+    }
+    .readbelow > h2{
+      font-size: 1.4rem;
+    }
+  }
+  
+  /* #endregion */
+  
+/* #region Media queries for a1-b1-container */
+
+@media (max-width: 575px){
+  
+  .a1-b1-container{
+    height: 272.016px;
+    width: 540px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px){
+  .a1-b1-container{
+    height: 272.016px;
+  }
+  
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .a1-b1-container{
+    height: 356.031px;
+  }
+  
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .a1-b1-container{
+    height: 468.031px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+  .a1-b1-container{
+      height: 552.062px;
+    }
+}
+@media (min-width: 1400px){
+  .a1-b1-container{
+    height: 552.062px;
+  }
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region CSS for intro section */
+
+.me{
+  border-radius: 50%;
+  width: 300px; 
+  height: 300px;
+}
+.intro-text{
+  max-width: 300px;
+}
+
+/* #endregion */
+
+/* CSS for projects section */
+
+.project-icon{
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+.project-text{
+  max-width: 400px;
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+  #projects{
+  transform: translateX(20vw);
+  }
+}
+
