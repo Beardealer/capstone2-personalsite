@@ -1,14 +1,9 @@
 
-body{
-    
-  }
-  
 p{
   font-family: "Raleway"; 
   font-size: 1.1rem;
   text-align: left;
 }
-
 h2{
   font-family: "Raleway";
 }
@@ -31,7 +26,6 @@ h4{
     width: 100%;
   }
   
-  
 /* The a1 and b1 containers were intially centered as bootstrap containers and I tried to overlay b1 over a1 by 
 translating it upwards by 100%. This however meant that the b1 container was not removed from the normal document 
 flow and so left space underneath, meaning there would be a large gap between this section and the next. 
@@ -51,7 +45,6 @@ the b1-container to set the height of the a1-b1-container so that it would "push
   justify-content: center;
   position: relative;
   }
-
 .a1-container{
     position: absolute;
     z-index: 1;
@@ -60,7 +53,6 @@ the b1-container to set the height of the a1-b1-container so that it would "push
     display: flex;
     justify-content: center;
   }
-  
 .b1-container{
     /*b1-container created to overlay a1 in order to overlay images and text*/
     /* background-color: rgb(30, 255, 0); */
@@ -71,7 +63,6 @@ the b1-container to set the height of the a1-b1-container so that it would "push
     display: flex;
     justify-content: center;
   }
-  
 .b1-grid{
     /* Created grid in order to place cloud images and text. */
     display: grid;
@@ -82,19 +73,15 @@ the b1-container to set the height of the a1-b1-container so that it would "push
     height: calc(100% + 3rem); 
     width: calc(100% + 3rem);
     transform: translate(-1.5rem, -3rem);
-    
   }
-  
 .cloudbox{
     /* Temporary borders to help visualise. */
     /* border: solid; */
     border-color: black;
   }
-  
 .cloudbox > img{
     width: 100%;
   }
-  
 .cloud1{
     grid-area: 1/6/1/7;
   }
@@ -131,10 +118,7 @@ the b1-container to set the height of the a1-b1-container so that it would "push
     color: #8f3f26;
   }
   
-  
-  
 /* #region Media queries for breakpoints */
-  
   
   /* y/x ratio of a1-container changes at different breakpoints. 
   To have b1 mimic the size of a1, check y of a1 at
@@ -166,7 +150,6 @@ the b1-container to set the height of the a1-b1-container so that it would "push
       padding-top: 40px;
     }
   }
-  
   @media (min-width: 576px) and (max-width: 767px){
     .b1-container{
       height: 272.016px;
@@ -192,11 +175,12 @@ the b1-container to set the height of the a1-b1-container so that it would "push
       height: calc(356.031px / 3);
     }
     h1{
-      padding-top: 20px;
+      padding-top: 30px;
       font-size: 2.5rem;
     }
     .readbelow > h2{
       font-size: 0.9rem;
+      padding-top: 20px;
     }
   }
   @media (min-width: 992px) and (max-width: 1199px){
@@ -229,7 +213,7 @@ the b1-container to set the height of the a1-b1-container so that it would "push
     }
     h1{
       font-size: 4rem;
-      padding-top: 10px;
+      padding-top: 30px;
     }
     .readbelow > h2{
       font-size: 1.4rem;
@@ -249,7 +233,7 @@ the b1-container to set the height of the a1-b1-container so that it would "push
     }
     h1{
       font-size: 4rem;
-      padding-top: 10px;
+      padding-top: 30px;
     }
     .readbelow > h2{
       font-size: 1.4rem;
@@ -261,7 +245,6 @@ the b1-container to set the height of the a1-b1-container so that it would "push
 /* #region Media queries for a1-b1-container */
 
 @media (max-width: 575px){
-  
   .a1-b1-container{
     height: 272.016px;
     width: 540px;
@@ -271,13 +254,11 @@ the b1-container to set the height of the a1-b1-container so that it would "push
   .a1-b1-container{
     height: 272.016px;
   }
-  
 }
 @media (min-width: 768px) and (max-width: 991px){
   .a1-b1-container{
     height: 356.031px;
   }
-  
 }
 @media (min-width: 992px) and (max-width: 1199px){
   .a1-b1-container{
@@ -312,7 +293,7 @@ the b1-container to set the height of the a1-b1-container so that it would "push
 
 /* #endregion */
 
-/* CSS for projects section */
+/* #region CSS for projects section */
 
 .project-icon{
   border-radius: 50%;
@@ -325,13 +306,15 @@ the b1-container to set the height of the a1-b1-container so that it would "push
 
 @media (min-width: 576px) and (max-width: 992px){
   #projects{
-  transform: translateX(20vw);
+  transform: translateX(15vw); /* Centers the projects when screen size is small*/
+  }
+  #projects > h3{
+    transform: translateX(-15vw);
   }
   .cv-container{
-    transform: translateX(-40vw);
+    transform: translateX(-40vw); /* Centers the CV button when screen size is small*/
   }
 }
-
 .cv-button{
   max-width: 100px;
   min-width: 100px;
@@ -354,3 +337,50 @@ the b1-container to set the height of the a1-b1-container so that it would "push
   min-width: 200px;
   border-radius: 5%;
 }
+
+/* #endregion */
+
+/* #region CSS for about me section */
+
+#contact-me p{
+  text-align: center;
+  max-width: 520px;
+  padding: 25px 0;
+}
+button > h4{
+  margin: 0;
+  text-shadow: 1px 1px 2px #8f3f26 ;
+}
+#contact-me button{
+  border: solid;
+  border-color: #ffba35;
+  background-color: #ffface;
+  margin-bottom: 50px;
+}
+#contact-me button:hover{
+  background-color: #ffc107;
+}
+#contact-me button:hover h4{
+ color: #8f3f26;
+ text-shadow: 1px 1px 2px #fff6a8;
+}
+/* #endregion */
+
+/* #region CSS for footer section */
+
+#footer{
+  background-color: #fff6a8;
+}
+#footer h5{
+  color: #8f3f26;
+  font-size: 1rem;
+}
+#footer a{
+  font-size: 0.8rem;
+  color: #8f3f26;
+}
+#footer p{
+  font-size: 0.7rem;
+}
+
+/* #endregion */

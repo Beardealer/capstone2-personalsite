@@ -76,7 +76,7 @@
                 <div class="c1-container container px-4 py-5 my-5 text-center">
                     <img class="me d-block mx-auto mb-4" src="./Assets/profilepic.jpg" alt="A photo of Jack">
                     <h3 class="display-5">Hello.</h3>
-                    <div class="intro-text col-lg-6 mx-auto">
+                    <div class="intro-text col-lg-6 mx-auto pt-2">
                         <p class="mb-4">I am a programmer-in-training. I am currently working through Angela Yu’s web development course. While it is challenging, I am enjoying every step of the way!</p>
                     </div>
                 </div>
@@ -86,28 +86,29 @@
 
         <!-- Projects start -->
         <section id="projects">
-            <div class="container col-xxl-8 px-4 ">
-                <div class="row flex-lg-row align-items-center g-3 ">
+            <h3 class="display-5 text-center pt-5 pb-2">My Projects</h3>
+            <div class="container col-xxl-8 px-4 border-top pt-5">  <!--Contains the two projects and the button linking to my CV. -->
+                <div class="row flex-lg-row align-items-center g-3 "> <!--Created a row for first project.-->
                     <div class="col-10 col-sm-8 col-lg-4">
-                        <img src="./Assets/tindog-pic2.jpg" class="project-icon d-block mx-lg-auto img-fluid" alt="Bootstrap project icon" loading="lazy">
+                        <a href="https://beardealer.github.io/bootstrap-tindog/"><img src="./Assets/tindog-pic2.jpg" class="project-icon d-block mx-lg-auto img-fluid" alt="Bootstrap project icon" loading="lazy"></a>
                     </div>
                     <div class="project-text col-lg-6">
-                        <h4 class="lh-1 mb-3">Bootstrap Project</h4>
+                        <h4 class="lh-1 mb-3">Bootstrap Project</h4> <!--lh-1 is a bootstrap class defining line height.-->
                         <p>I created a web page to the course’s specifications using bootstrap. It is a multi-section web page that utilises many bootstrap features and pre-built functions such as adaptive columns for spacing and customisable cards and buttons.</p>
                     </div>
                 </div>
-                <div class="row flex-lg-row align-items-center g-3 py-5">
+                <div class="row flex-lg-row align-items-center g-3 py-5"> <!--Created a row for second project.-->
                     <div class="col-10 col-sm-8 col-lg-4">
-                        <img src="./Assets/meme-pic.jpg" class="project-icon d-block mx-lg-auto img-fluid" alt="Meme project icon" loading="lazy">
+                        <a href="https://beardealer.github.io/6.4-meme/"><img src="./Assets/meme-pic.jpg" class="project-icon d-block mx-lg-auto img-fluid" alt="Meme project icon" loading="lazy"></a>
                     </div>
                     <div class="project-text col-lg-6">
                         <h4 class="lh-1 mb-3">Meme Project</h4>
                         <p>Check out this hilarious meme page that I created with the power of CSS properties (it was one of those things you just had to be there for). The more I learn, the more things become possible! This is where I started enjoying the creative aspect of coding.</p>
                     </div>
                 </div>
-                <div class="cv-container row flex-row-reverse">
-                    <div class="cv-button-box col-2">
-                        <div class="row flex-row-reverse ">
+                <div class="cv-container row flex-row-reverse"> <!--Created a row for the CV button. Reverse flex places the item the end of the row.-->
+                    <div class="cv-button-box col-2 py-1"> <!--I wanted to create a brown box around the button and accompanying text rather than changing the colour of a row that occupied the entire width.-->
+                        <div class="row flex-row-reverse "> <!--Created a row inside the brown box so I could create a column for the button and one for the text.-->
                             <div class= "col-6 align-content-center">
                                 <p>If you would like to know more, please click this button to see my CV</p>
                             </div>
@@ -123,18 +124,111 @@
 
         <!-- About me start -->
         <section id="about-me">
-
+            <div class="container px-4 py-5" id="icon-grid">
+                <h3 class="pb-2 border-bottom display-5 text-center">About Me</h3>
+            
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+                  <div class="col d-flex align-items-start">
+                    <img src="./Assets/guitar.png" class="bi text-body-secondary flex-shrink-0 me-3" width="50px" height="50px"></img>
+                    <div>
+                      <h4 class="  mb-0 fs-4  ">Music</h4>
+                      <p>I love to play instruments and produce my own music.</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <img src="./Assets/joystick.png" class="bi text-body-secondary flex-shrink-0 me-3" width="50px" height="50px"></img>
+                    <div>
+                      <h4 class="  mb-0 fs-4 ">Video Games</h4>
+                      <p>I'm into all sorts of video games - RTS, RPG, FPS you name it.</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <img src="./Assets/hiking.png" class="bi text-body-secondary flex-shrink-0 me-3" width="50px" height="50px"></img>                    <div>
+                      <h4 class="  mb-0 fs-4  ">Hiking</h4>
+                      <p>Getting out into the great outdoors feels great. We have some beautiful countryside in England.</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <img src="./Assets/tennis.png" class="bi text-body-secondary flex-shrink-0 me-3" width="50px" height="50px"></img>                    <div>
+                      <h4 class="  mb-0 fs-4  ">Badminton/Tennis</h4>
+                      <p>I really enjoy sports as a way of keeping active. Tennis when the weather's nice, badminton when it's not!</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <img src="./Assets/book.png" class="bi text-body-secondary flex-shrink-0 me-3" width="50px" height="50px"></img>                    <div>
+                      <h4 class="  mb-0 fs-4  ">Reading</h4>
+                      <p>I read a lot of fantasy/sci-fi. Everyone needs a little escapism!</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <img src="./Assets/barbell.png" class="bi text-body-secondary flex-shrink-0 me-3" width="50px" height="50px"></img>                    <div>
+                      <h4 class="  mb-0 fs-4  ">Gym</h4>
+                      <p>I try to spend around 5-7 hours at the gym each week for both physical and mental well-being.</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <img src="./Assets/chilli.png" class="bi text-body-secondary flex-shrink-0 me-3" width="50px" height="50px"></img>                    <div>
+                      <h4 class="  mb-0 fs-4  ">Hot Sauce</h4>
+                      <p>I'm a big fan of hot sauces. There's a lot of variety in both flavour and hotness. Bring it on!</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <img src="./Assets/beer.png" class="bi text-body-secondary flex-shrink-0 me-3" width="50px" height="50px"></img>                    <div>
+                      <h4 class="  mb-0 fs-4  ">Root Beer</h4>
+                      <p>There's not enough root beer around here! I'm always on the lookout for new root beers.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </section>
         <!-- About me end -->
 
         <!-- Contact me start -->
         <section id="contact-me">
-
+            <div class="container text-center">
+                <h3>Hit Me Up</h3>
+                <h4>If you wanna talk coding or maybe just jam.</h4>
+                <div class="d-flex justify-content-center">
+                    <p>It’s great to embrace your creative side. I’m enjoying putting effort into learning coding skills and into creating music. Let’s do it together!</p>
+                </div>
+                <a href="./Public/4.4 HTML capstone project/public/contact.html"><button class="btn btn-outline-warning" type="button"><h4>CONTACT ME</h4></button></a>
+            </div>
         </section>
         <!-- Contact me end -->
 
         <!-- Footer start -->
         <section id="footer">
+
+            <div class="container">
+                <footer class="pt-3 pb-2">
+                  <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                      <h5>Icon Sources</h5>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"> <a href="https://www.flaticon.com/free-icons/chilli" class="nav-link p-0" title="chilli icons">Chilli icons created by Good Ware - Flaticon</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.flaticon.com/free-icons/beer" class="nav-link p-0" title="beer icons">Beer icons created by kerismaker - Flaticon</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.flaticon.com/free-icons/hiking" class="nav-link p-0" title="hiking icons">Hiking icons created by Smashicons - Flaticon</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.flaticon.com/free-icons/guitar" class="nav-link p-0" title="guitar icons">Guitar icons created by Freepik - Flaticon</a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5 style="color: #fff6a8;">Icon Sources</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item mb-2"><a href="https://www.flaticon.com/free-icons/book" class="nav-link p-0" title="book icons">Book icons created by Freepik - Flaticon</a></li>
+                          <li class="nav-item mb-2"><a href="https://www.flaticon.com/free-icons/barbell" class="nav-link p-0" title="barbell icons">Barbell icons created by Vitaly Gorbachev - Flaticon</a></li>
+                          <li class="nav-item mb-2"><a href="https://www.flaticon.com/free-icons/tennis" class="nav-link p-0" title="tennis icons">Tennis icons created by Freepik - Flaticon</a></li>
+                          <li class="nav-item mb-2"><a href="https://www.flaticon.com/free-icons/gaming" class="nav-link p-0" title="gaming icons">Gaming icons created by mynamepong - Flaticon</a></li>
+                        </ul>
+                    </div>
+              
+                  <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4 border-top">
+                    <p>© Jack Coogan 2024 @ Jack Stuff</p>
+                  </div>
+                </footer>
+              </div>
+
+
 
         </section>
         <!-- Footer end -->
