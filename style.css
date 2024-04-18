@@ -286,6 +286,7 @@ the b1-container to set the height of the a1-b1-container so that it would "push
   border-radius: 50%;
   width: 300px; 
   height: 300px;
+  object-fit: cover;
 }
 .intro-text{
   max-width: 300px;
@@ -351,19 +352,20 @@ button > h4{
   margin: 0;
   text-shadow: 1px 1px 2px #8f3f26 ;
 }
-#contact-me button{
+/* I initially targeted this button using #contact-me button{}, but this caused the background-color property 
+to override the bootstrap's background colour applied when hovering. Created the contact-button class and 
+selected through this to fix the issue (id selector priority was too high) */
+.contact-button{
   border: solid;
   border-color: #ffba35;
   background-color: #ffface;
   margin-bottom: 50px;
 }
-#contact-me button:hover{
-  background-color: #ffc107;
-}
+
 #contact-me button:hover h4{
  color: #8f3f26;
  text-shadow: 1px 1px 2px #fff6a8;
-}
+} 
 /* #endregion */
 
 /* #region CSS for footer section */
